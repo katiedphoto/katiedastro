@@ -1,48 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap');
-
-/* Katie Dew Photography - complete stylesheet */
-:root{color-scheme:dark;--bg:#101113;--surface:#191b1e;--ink:#f0efeb;--muted:#aaaead;--line:#303337;--accent:#bfcdbf;--radius:16px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:110px}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.8 'DM Sans',Arial,sans-serif}
-body.modal-open{overflow:hidden}
-a{color:inherit;text-decoration:none}
-button,input,textarea{font:inherit}
-button,a,input,textarea{-webkit-tap-highlight-color:transparent}
-button{cursor:pointer;color:inherit}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
-img{display:block;width:100%;height:100%;object-fit:cover}
-[hidden]{display:none!important}
-.wrap{width:min(1200px,90%);margin:auto}
-.skip{position:absolute;left:15px;top:-80px;background:var(--ink);color:var(--bg);z-index:20;padding:10px}
-.skip:focus{top:15px}
-.header{height:100px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid #ffffff0c;position:relative;z-index:5;background:var(--bg)}
-.wordmark{font:500 19px/1.4 'Manrope',Arial,sans-serif;letter-spacing:3px;white-space:nowrap}
-.wordmark span{display:block;color:var(--muted);font:400 9px/2 'DM Sans',Arial,sans-serif;letter-spacing:4.4px}
-nav{display:flex;gap:35px;align-items:center}
-nav a{font-size:13px;color:var(--muted);padding:12px 0}
-nav a:hover,nav a[aria-current]{color:var(--ink)}
-nav a[aria-current]{border-bottom:1px solid var(--accent)}
-.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:12px}
-.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
-h1,h2,h3{font-family:'Manrope',Arial,sans-serif;font-weight:400;line-height:1.18;letter-spacing:-1.5px}
-h1{font-size:clamp(38px,5vw,72px);margin:0 0 25px}
-h2{font-size:clamp(29px,3.5vw,47px);margin:0 0 25px}
-h3{font-size:22px;letter-spacing:-.5px;margin:12px 0}
-p{color:var(--muted);margin:0 0 22px}
 .button{display:inline-flex;align-items:center;justify-content:center;gap:25px;background:var(--ink);color:#141615;border:0;border-radius:40px;padding:13px 24px;font-size:12px}
 .button.outline{background:transparent;color:var(--ink);border:1px solid #646a66}
 .text-link{font-size:12px;border-bottom:1px solid #727b73;padding-bottom:6px}
 .section{padding:95px 0}
 
-/* Homepage: image is sharp and full brightness; overlay is subtle */
-.hero{min-height:660px;height:calc(100svh - 100px);max-height:1000px;position:relative;display:flex;align-items:center;isolation:isolate;overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:none;z-index:-2}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,11,18,.28),transparent 75%),linear-gradient(0deg,rgba(16,17,19,.55),transparent 18%);z-index:-1;pointer-events:none}
+/* Original homepage hero styling */
+.hero{min-height:660px;height:calc(100svh - 100px);max-height:1000px;position:relative;display:flex;align-items:center}
+.hero>img{position:absolute;inset:0;filter:brightness(.6)}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#070b12b0,transparent 90%),linear-gradient(0deg,#101113,transparent 30%)}
 .hero-copy{position:relative;z-index:1;padding:60px 0}
 .hero h1{max-width:740px;font-size:clamp(48px,7vw,98px);letter-spacing:-3px}
 .hero p{color:#d3d9d7;max-width:410px}
-.hero-foot{position:absolute;bottom:35px;left:5%;z-index:1;width:90%;display:flex;justify-content:space-between;font-size:11px;color:#c9cfca;letter-spacing:1px}
+.hero-foot{position:absolute;bottom:35px;z-index:1;width:100%;display:flex;justify-content:space-between;font-size:11px;color:#c9cfca;letter-spacing:1px}
 .section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}
 .section-heading h2{margin-bottom:0}
 .collections{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
