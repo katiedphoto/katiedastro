@@ -1,1 +1,22 @@
-
+katie-dew-photography/
+│
+├── index.html
+├── gallery.html
+├── about.html
+├── style.css
+├── script.js
+│
+└── images/
+    ├── astrophotography/
+    │   ├── milkyway.jpg
+    │   └── startrails.jpg
+    │
+    ├── landscapes/
+    │   ├── mtmaroon.jpg
+    │   └── waterfall.jpg
+    │
+    ├── aerial/
+    │   └── brisbane.jpg
+    │
+    └── blog/
+        └── hiking.jpg
